@@ -1,6 +1,13 @@
 - Create a class named `Node` that is responsible for storing the value and a reference to the next node.
-- Create another class named `LinkedList` that will manage multiple nodes and will do operations like adding, removing, searching etc.
+- Create another class named `LinkedList` that will manage multiple nodes and will do operations like adding, removing, searching etc. This class will accept one parameter the head(initial) value that will be the first value of the linked list. If the user doesn't pass the first value default to `null`
+
 - Make sure to add the following methods in the `LinkedList` class.
+
+  - `insertHead`
+    It will add the new node to the beginning of the linked list.
+
+  - `removeHead`
+    It will remove the new node to the beginning of the linked list.
 
   - `forEach`
     This method on linked list will behave similar to `Array.forEach`. It will accept a callback function and will execute the callback function will the value of each node.
@@ -14,10 +21,32 @@
   - `find`
     It will accept a callback function and return the first value which matched the condition in callback function. If no value matched the condition return `-1`.
 
-  - `insert`
-    It will add the node to the top of the linked list.
+- Additions Methods:
 
-  - `remove`
-    It will remove the node from the top of the linked list.
+  - `insertTail`
+    It will add the new node at the end of the linked list.
 
-- Change the `insert` and `remove` methods in such a way the both accepts a parameter i.e the index of the element to remove or insert. Based on the index the item will inserted or removed from that specific index. If the index is out of range return `null`
+  - `removeTail`
+    It will remove the new node at the end of the linked list.
+
+```js
+// Your code goes here
+
+// Test
+let list = new LinkedList(10);
+list.insertHead(9);
+list.insertHead(8);
+list.insertTail(11);
+list.insertTail(12);
+list.printAll(); // 8 9 10 11 12
+list.forEach(alert); // alerts 8 9 10 11 12 one after another
+console.log(list.size()); // 5
+list.removeHead();
+console.log(list.size()); // 4
+list.printAll(); // 9 10 11 12
+list.removeTail();
+console.log(list.size()); // 3
+list.printAll(); // 9 10 11
+console.log(list.find((v) => v > 10)); // 11
+console.log(list.find((v) => v > 100)); // -1
+```
