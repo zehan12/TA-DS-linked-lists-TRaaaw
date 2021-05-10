@@ -16,24 +16,7 @@ Example 2:
 
 First array is `[1, 5, 23, 32, -42, 100]` and second array is `[200, 23, 32, -42]`. In this example the second array is not a subsequence of the first array.
 
-3. Given an array find the longest incrementing subsequence.
-
-Example 1:
-
-Input: `[10,9,2,5,3,7,101,18]`
-Output: `[2,3,7,101]`
-
-Example 2:
-
-Input: `[0,1,0,3,2,3]`
-Output: `[0, 1, 2, 3]`
-
-Example 3:
-
-Input: `[0, 0, 0, 0]`
-Output: `[0]`
-
-4. Hamming Distance
+3. Hamming Distance
 
 the Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different. In other words, it measures the minimum number of substitutions required to change one string into the other, or the minimum number of errors that could have transformed one string into the other. In a more general context, the Hamming distance is one of several string metrics for measuring the edit distance between two sequences.
 
@@ -48,20 +31,20 @@ Output: 3
 Input: `1011101` and `1001001`
 Output: 3
 
-5. Longest Common Substring Problem
+4. For a given number, find all the prime numbers in an array from zero to that number.
 
-The longest common substring problem is to find the longest string (or strings) that is a substring (or are substrings) of two or more strings.
-
-Examples:
-
-The longest common substring of the strings `ABABC`, `BABCA` and
-`ABCBA` is string `ABC` of length 3. Other common substrings are
-`A`, `AB`, `B`, `BA`, `BC` and `C`.
-
+```js
+// Test
+let primeNumbers = getAllPrimeNumbers(100); // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 ```
-ABABC
-  |||
- BABCA
-  |||
-  ABCBA
+
+5. Given a phrase, reverse the order of the characters of each word.
+
+Example:
+
+"I love JavaScript!" will become "I evol !tpircSavaJ"
+
+```js
+// Test
+reverseWords("I love JavaScript!"); // "I evol !tpircSavaJ"
 ```
